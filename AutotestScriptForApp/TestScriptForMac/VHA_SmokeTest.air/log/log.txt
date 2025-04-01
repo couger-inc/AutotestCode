@@ -1,0 +1,2 @@
+{"tag": "function", "depth": 1, "time": 1718783615.3357992, "data": {"name": "connect_device", "call_args": {"uri": "ios:///127.0.0.1:8100"}, "start_time": 1718783611.9238298, "ret": "<IOS 'e1d43ec1f72340061369c82b3956e8719687b7f5'>", "end_time": 1718783615.3357992}}
+{"tag": "function", "depth": 1, "time": 1718783618.3383968, "data": {"name": "start_app", "call_args": {"package": "jp.co.couger.ludens", "activity": null}, "start_time": 1718783618.102547, "ret": null, "end_time": 1718783618.3383968}}

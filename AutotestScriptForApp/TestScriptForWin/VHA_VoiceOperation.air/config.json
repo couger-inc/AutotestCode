@@ -1,0 +1,20 @@
+{
+  "windows": {
+    "script_root": "C:\\AutotestScript\\テストスクリプト(IOS)\\VHA_VoiceOperation.air",
+    "log_root": "C:\\AutotestScript\\テストスクリプト(IOS)\\VHA_VoiceOperation.air\\log",
+    "export_dir": "C:\\VHAtestReport\\VHA_VoiceOperation",
+    "logfile": "C:\\AutotestScript\\テストスクリプト(IOS)\\VHA_VoiceOperation.air\\log\\log.txt",
+    "device_connection_string": "ios:///127.0.0.1:8100",
+    "log_level": "WARNING",
+    "timestamp_format": "%Y%m%d%H%M%S"
+  },
+  "mac": {
+    "script_root": "/Users/xushengqing/CougerAutoTestScript/AutotestScriptForApp/テストスクリプト(IOS)/VHA_VoiceOperation.air",
+    "log_root": "/Users/xushengqing/CougerAutoTestScript/AutotestScriptForApp/テストスクリプト(IOS)/VHA_VoiceOperation.air/log",
+    "export_dir": "/Users/xushengqing/CougerAutoTestScript/AutotestScriptForApp/VHAtestReport",
+    "logfile": "/Users/xushengqing/CougerAutoTestScript/AutotestScriptForApp/テストスクリプト(IOS)/VHA_VoiceOperation.air/log/log.txt",
+    "device_connection_string": "ios:///127.0.0.1:8100",
+    "log_level": "WARNING",
+    "timestamp_format": "%Y%m%d%H%M%S"
+  }
+}

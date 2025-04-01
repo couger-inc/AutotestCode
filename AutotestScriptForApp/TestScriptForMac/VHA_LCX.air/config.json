@@ -1,0 +1,20 @@
+{
+  "windows": {
+    "script_root": "C:\\AutotestScript\\テストスクリプト(IOS)\\VHA_SmokeTest.air",
+    "log_root": "C:\\AutotestScript\\テストスクリプト(IOS)\\VHA_SmokeTest.air\\log",
+    "export_dir": "C:\\VHAtestReport\\VHA_SmokeTest",
+    "logfile": "C:\\AutotestScript\\テストスクリプト(IOS)\\VHA_SmokeTest.air\\log\\log.txt",
+    "device_connection_string": "ios:///127.0.0.1:8100",
+    "log_level": "WARNING",
+    "timestamp_format": "%Y%m%d%H%M%S"
+  },
+  "mac": {
+    "script_root": "/Users/xushengqing/CougerAutoTestScript/AutotestScriptForApp/TestScriptForMac/VHA_LCX.air",
+    "log_root": "/Users/xushengqing/CougerAutoTestScript/AutotestScriptForApp/TestScriptForMac/VHA_LCX.air/log",
+    "export_dir": "/Users/xushengqing/CougerAutoTestScript/VHAtestReport/VHA_LCX",
+    "logfile": "/Users/xushengqing/CougerAutoTestScript/AutotestScriptForApp/TestScriptForMac/VHA_LCX.air/log/log.txt",
+    "device_connection_string": "ios:///http://127.0.0.1:8100",
+    "log_level": "WARNING",
+    "timestamp_format": "%Y%m%d%H%M%S"
+  }
+}

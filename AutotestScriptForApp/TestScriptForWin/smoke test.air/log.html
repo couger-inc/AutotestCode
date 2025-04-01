@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+    <title>Airtest Report </title>
+    
+    <!--[if lt IE 9]>
+    <script src="https://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="C:/Python/Python312/Lib/site-packages/airtest/report/css/report.css" rel="stylesheet">
+
+    <script src="C:/Python/Python312/Lib/site-packages/airtest/report/js/jquery-1.10.2.min.js"></script>
+    <script src="C:/Python/Python312/Lib/site-packages/airtest/report/js/jquery-lang.js" charset="utf-8" type="text/javascript"></script>
+    <script src="C:/Python/Python312/Lib/site-packages/airtest/report/js/langpack/zh_CN.js" charset="utf-8" type="text/javascript"></script>
+    <script src="C:/Python/Python312/Lib/site-packages/airtest/report/js/lazyload.js" charset="utf-8" type="text/javascript"></script>
+    <script type="text/javascript">
+      data = {"steps": [{"title": "Connect device", "time": 1730770064.2612572, "code": {"name": "connect_device", "args": [{"key": "uri", "value": "ios:///127.0.0.1:8100"}]}, "screen": null, "desc": "Connect device: ios:///127.0.0.1:8100", "traceback": "", "log": "", "assert": null}, {"title": "start_app", "time": 1730770065.2508204, "code": {"name": "start_app", "args": [{"key": "package", "value": "jp.co.couger.ludens"}, {"key": "activity", "value": null}]}, "screen": null, "desc": null, "traceback": "Traceback (most recent call last):\n  File \"C:\\Python\\Python312\\Lib\\site-packages\\airtest\\utils\\logwraper.py\", line 131, in wrapper\n    res = f(*args, **kwargs)\n          ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python\\Python312\\Lib\\site-packages\\airtest\\core\\api.py\", line 189, in start_app\n    G.DEVICE.start_app(package, activity)\n  File \"C:\\Python\\Python312\\Lib\\site-packages\\airtest\\core\\ios\\ios.py\", line 51, in wrapper\n    return func(self, *args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python\\Python312\\Lib\\site-packages\\airtest\\core\\ios\\ios.py\", line 865, in start_app\n    return TIDevice.start_app(self.udid, bundle_id)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python\\Python312\\Lib\\site-packages\\airtest\\core\\ios\\ios.py\", line 71, in wrapper\n    return func(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python\\Python312\\Lib\\site-packages\\airtest\\core\\ios\\ios.py\", line 215, in start_app\n    BaseDevice(udid, Usbmux()).app_start(bundle_id=bundle_id)\n  File \"C:\\Python\\Python312\\Lib\\site-packages\\tidevice\\_device.py\", line 721, in app_start\n    return ts.app_launch(bundle_id, args=args, app_env=env)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Python\\Python312\\Lib\\site-packages\\tidevice\\_instruments.py\", line 723, in app_launch\n    raise ServiceError(\"app launch failed\", error_message)\ntidevice.exceptions.ServiceError: [Errno app launch failed] NSError(CODE:2 DOMAIN:com.apple.dt.deviceprocesscontrolservice INFO:{'NSLocalizedDescription': 'Request to launch jp.co.couger.ludens failed.',\n 'NSLocalizedFailureReason': 'The request to open \"jp.co.couger.ludens\" failed. : Failed to launch process with bundle '\n                             \"identifier 'jp.co.couger.ludens'.\",\n 'NSUnderlyingError': NSError(CODE:4 DOMAIN:FBSOpenApplicationServiceErrorDomain INFO:{'BSErrorCodeDescription': 'InvalidRequest',\n 'FBSOpenApplicationRequestID': '0x1bad',\n 'NSLocalizedDescription': 'The request to open \"jp.co.couger.ludens\" failed.',\n 'NSUnderlyingError': NSError(CODE:4 DOMAIN:FBSOpenApplicationErrorDomain INFO:{'BSErrorCodeDescription': 'NotFound',\n 'NSLocalizedFailureReason': 'Application info provider (FBSApplicationLibrary) returned nil for \"jp.co.couger.ludens\"'})})})\n", "log": "", "assert": null}], "name": "C:\\AutotestScript\\\u30c6\u30b9\u30c8\u30b9\u30af\u30ea\u30d7\u30c8(IOS)\\smoke test.air", "scale": 0.5, "test_result": false, "run_end": 1730770065.2508204, "run_start": 1730770060.8525708, "static_root": "C:/Python/Python312/Lib/site-packages/airtest/report/", "lang": "en", "records": ["C:\\AutotestScript\\\u30c6\u30b9\u30c8\u30b9\u30af\u30ea\u30d7\u30c8(IOS)\\smoke test.air\\log\\test.mp4"], "info": {"name": "smoke test.air", "path": "C:\\AutotestScript\\\u30c6\u30b9\u30c8\u30b9\u30af\u30ea\u30d7\u30c8(IOS)\\smoke test.air\\smoke test.py", "author": "shengqing", "title": "", "desc": "", "devices": {"127.0.0.1:8100": "ios:///127.0.0.1:8100"}}, "log": "log\\log.txt", "console": ""};
+      lang = new Lang();
+      lang.init({
+        defaultLang: 'en',
+        currentLang: 'en'
+      });
+    </script>
+  </head>
+
+  <body>
+
+    <div class="container-fluid">
+      <div class="row">
+        
+        <div id="main" class="main col-md-12">
+          <div id="back_multi"></div>
+          <h1 class="title">Airtest Report </h1>
+          
+          <div class="summary" >
+
+            <div class="show-horizontal">
+              <div class="info info1">
+                <div class="info-left">
+                  <img id='result-img' />
+                </div>
+                <div class="info-right">
+                  <div class="info-title"><span lang='en'>Airtest Report</span>
+                    <label id='result-desc' lang="en"></label>
+                  </div>
+                  <div class="info-content">
+                    <div class='info-sub start'></div>
+                    <div class='info-sub time'></div>
+                  </div>
+                  <div class="info-toal">
+                    <div class="info-step">
+                      <span class="info-name" lang="en">Steps: </span>
+                      <span class="info-value">2</span>
+                    </div>
+                    <div class="info-time">
+                      <span class="info-name" lang="en">Time: </span>
+                      <span class="info-value duration">xxx</span>
+                    </div>
+                    
+                    
+                    <div class="info-log">
+                      <span class="info-name" lang="en">Log: </span>
+                      <span class="info-value log">
+                        <a href="log\log.txt" target="_blank" download="log.txt">log.txt <img src="C:/Python/Python312/Lib/site-packages/airtest/report/image/download_log.svg" /></a>
+                      </span>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+
+              <div class="info info2">
+                <div class="info-left"></div>
+                <div class="info-right">
+                  <div class="info-title"><span lang='en'>Executors</span></div>
+                  <div class="info-content">
+                    <div class="info-execute">
+                      <div class="circle-img"></div>
+                      
+                        <div class="info-name"><span lang="en">Author:</span> shengqing</div>
+                      
+                    </div>
+                    <div class="info-execute">
+                      <div class="circle-img"></div>
+                      <div class="info-file" title="C:\AutotestScript\テストスクリプト(IOS)\smoke test.air\smoke test.py">smoke test.air
+                        <img id="copy_path" class="copy-img" data-value="C:\AutotestScript\テストスクリプト(IOS)\smoke test.air\smoke test.py" title="copy file path to clipboard" src="C:/Python/Python312/Lib/site-packages/airtest/report/image/copy.svg" />
+                      </div>
+                    </div>
+
+                    
+                    <div class="info-execute">
+                      <div class="circle-img"></div>
+                      
+                      <div class="info-file" title="ios:///127.0.0.1:8100"><span lang="en">Device: </span> 127.0.0.1:8100
+                        <img class="copy-img" title="copy file path to clipboard" src="C:/Python/Python312/Lib/site-packages/airtest/report/image/copy.svg" data-value="ios:///127.0.0.1:8100"/>
+                      </div>
+                    </div>
+                    
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div>
+          <div class="device" id='device'>
+          </div>
+          <!-- 可以额外显示自定义模块，支持插入Html内容 -->
+          
+          <div class="gallery">
+            <div class="info-title"><span lang="en">Quick view</span></div>
+            <div class ='placeholder'>
+              <div class="content">
+              </div>
+            </div>
+          </div>
+
+          <!--单步-->
+          
+          
+          <div class="steps">
+            <div class="content">
+              <div class="steps-head">
+                <div class="head-left">
+                  <div class="order" id='order'><span lang="en">order</span></div>
+                  <div class="order" id='duration'><span lang="en">duration</span></div>
+                  <div class="order" id='status'><span lang="en">status</span></div>
+                </div>
+                <div class="head-right">
+                  <span lang="en" class="jump-wrong" id='jump-wrong'>Jump to wrong step</span>
+                  <span lang="en">Filter by:</span>
+                  <span class="filters">
+                    <span lang="en" class="filter" id="all" alt="show all steps">All</span>
+                    <span lang="en" class="filter" id='success' alt="show success steps only">Success</span>
+                    <span lang="en" class="filter" id='fail' alt="show failed steps only">Failed</span>
+                    <span lang="en" class="filter" id="assert" alt="show steps with assertion only">Assert</span>
+                  </span>
+                </div>
+              </div>
+              <div class="steps-content">
+                <div class="step-left" id='step-left'>
+                  <div class="step-list"></div>
+                  <div id="pageTool"></div>
+                </div>
+                <div class="step-right" id='step-right'></div>
+              </div>
+            </div>
+            
+            </div>
+        </div>
+        
+      
+      <div class="footer">
+        <div class="footer-content">
+          <div class="foo">
+            <div class="interfaces">
+              <a class="icon" href="https://github.com/AirtestProject/Airtest"  target="_blank">
+                <img src="C:/Python/Python312/Lib/site-packages/airtest/report/image/Airtest.png" alt="airtest">
+              </a>
+              <a class="icon" href="https://github.com/AirtestProject/poco"  target="_blank">
+                <img src="C:/Python/Python312/Lib/site-packages/airtest/report/image/poco.png" alt="Poco">
+              </a>
+            </div>
+          </div>
+          <div class="foo">
+            <div class="apps">
+              <a class="icon ide" href="http://airtest.netease.com/"  target="_blank">
+                <img src="C:/Python/Python312/Lib/site-packages/airtest/report/image/AirtestIDE.png" alt="AirtestIDE">
+              </a>
+              <a class="icon" href="https://airlab.163.com/"  target="_blank">
+                <img src="C:/Python/Python312/Lib/site-packages/airtest/report/image/AirLab.png" alt="AirLab">
+              </a>
+            </div>
+          </div>
+          <div class="foo">
+            <div class="corp">
+                <img src="C:/Python/Python312/Lib/site-packages/airtest/report/image/netease.png" alt="NetEase">
+                <span lang="en">© 1997 - 2020 NetEase, Inc. All Rights Reserved.</span>
+            </div>
+          </div>
+        </div>
+      </div> 
+      
+      </div>
+      <!-- 录屏 -->
+      <div class="row gif-wrap show">
+          <div class="menu">
+            <div class="pattern pattern1">
+              <div class="minimize">
+                <img title="minimize" src="C:/Python/Python312/Lib/site-packages/airtest/report/image/minimize.svg" />
+              </div>
+              <div class="close">
+                <img title="close" src="C:/Python/Python312/Lib/site-packages/airtest/report/image/close.svg" />
+              </div>
+            </div>
+            <div class="pattern pattern2">
+              <div class="maximize">
+                <img title="maximize" src="C:/Python/Python312/Lib/site-packages/airtest/report/image/maximize.svg" />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            
+              
+                <div align="center" class="embed-responsive embed-responsive-16by9">
+                    <a href="C:\AutotestScript\テストスクリプト(IOS)\smoke test.air\log\test.mp4" target="_blank" class="open_in_new_tab">
+                      <img title="open in new tab" src="C:/Python/Python312/Lib/site-packages/airtest/report/image/open_in_new_tab.svg" />
+                    </a>
+                    <video class="embed-responsive-item" controls>
+                        <source src="C:\AutotestScript\テストスクリプト(IOS)\smoke test.air\log\test.mp4" type="video/mp4">
+                    </video>
+                </div>
+              
+            
+          </div>
+        </div>
+        <!-- max pic -->
+      <div id='magnify' class="mask hide">
+        <div class="content">
+        </div>
+      </div>
+    </div>
+
+  <link href="C:/Python/Python312/Lib/site-packages/airtest/report/css/monokai_sublime.min.css" rel="stylesheet">
+  <script src="C:/Python/Python312/Lib/site-packages/airtest/report/js/highlight.min.js"></script>
+  <script type="text/javascript" src="C:/Python/Python312/Lib/site-packages/airtest/report/js/paging.js"></script>
+  <script src="C:/Python/Python312/Lib/site-packages/airtest/report/js/report.js"></script>
+</body>
+</html>

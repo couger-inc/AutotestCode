@@ -1,0 +1,2 @@
+# Airtest_IC_ITCC_Flux
+IC_ITCC_FluxのAirtestでの自動化スクリプトを管理。

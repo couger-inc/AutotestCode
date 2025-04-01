@@ -1,0 +1,2 @@
+# Selenium_Autotest_Flux
+fluxのSeleniumでの自動化スクリプトを管理。
