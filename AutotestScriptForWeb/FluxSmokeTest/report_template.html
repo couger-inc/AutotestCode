@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+<meta charset="UTF-8">
+<style>
+body {{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}}
+h1 {{
+    color: #333;
+}}
+.summary-table {{
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 300px; /* 可根据需要调整宽度 */
+}}
+.summary-table th, .summary-table td {{
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    font-size: 14px;
+    vertical-align: top;
+}}
+.summary-table th {{
+    background: #f7f7f7;
+    width: 150px; /* 可根据需要调整列宽 */
+    font-weight: bold;
+    color: #333;
+}}
+.test-result-pass {{
+    color: green;
+    font-weight: bold;
+}}
+.test-result-fail {{
+    color: red;
+    font-weight: bold;
+}}
+
+.table-container {{
+    margin-top: 20px;
+}}
+.collapsible-table {{
+    width: 100%;
+    border-collapse: collapse;
+}}
+.collapsible-table th, .collapsible-table td {{
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    font-size: 14px;
+}}
+.collapsible-table th {{
+    background: #f2f2f2;
+}}
+.success {{
+    background: #e6ffe6;
+}}
+.fail {{
+    background: #ffe6e6;
+}}
+.toggle-btn {{
+    padding: 5px 10px;
+    background: #007BFF;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}}
+.toggle-btn:hover {{
+    background: #0056b3;
+}}
+.env-table {{
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 600px;
+}}
+.env-table th, .env-table td {{
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    font-size: 14px;
+    vertical-align: top;
+}}
+.env-table th {{
+    background: #f7f7f7;
+    width: 150px;
+    font-weight: bold;
+    color: #333;
+}}
+</style>
+<title>FluxWebUIデグレチェック結果</title>
+</head>
+<body>
+<h1>FluxWebUIデグレチェック結果</h1>
+
+<!-- 环境信息表格 -->
+<table class="env-table">
+    <tr>
+        <th>実行日時</th>
+        <td>{report_time}</td>
+    </tr>
+    <tr>
+        <th>テスト環境URL</th>
+        <td>{report_env}</td>
+    </tr>
+    <tr>
+        <th>使用ブラウザ</th>
+        <td>{report_browser}</td>
+    </tr>
+    <tr>
+        <th>使用テストアカウント</th>
+        <td>{report_account}</td>
+    </tr>
+</table>
+
+<h2>テスト概要</h2>
+<table class="summary-table">
+    <!-- 新增行：テスト結果行 -->
+    <tr>
+        <th>テスト結果</th>
+        <td><span class="{test_result_class}">{test_result_text}</span>{fail_step_info}</td>
+    </tr>
+    <tr>
+        <th>総ケース数</th>
+        <td>{total_steps}</td>
+    </tr>
+    <tr>
+        <th>成功ケース数</th>
+        <td>{success_steps}</td>
+    </tr>
+    <tr>
+        <th>失敗ケース数</th>
+        <td>{fail_steps}</td>
+    </tr>
+</table>
+
+<div class="table-container">
+    <!-- 折叠/展开按钮 -->
+    <button class="toggle-btn" onclick="toggleTable()">ステップ一覧を表示/非表示</button>
+
+    <!-- 可收起的表格 -->
+    <table id="test-steps-table" class="collapsible-table">
+        <tr>
+            <th>No</th>
+            <th>時間</th>
+            <th>操作</th>
+            <th>結果</th>
+        </tr>
+        {table_rows}
+    </table>
+</div>
+
+<script>
+function toggleTable() {{
+    const table = document.getElementById('test-steps-table');
+    if (table.style.display === 'none') {{
+        table.style.display = 'table';
+    }} else {{
+        table.style.display = 'none';
+    }}
+}}
+</script>
+</body>
+</html>
